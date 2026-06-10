@@ -24,7 +24,7 @@ const templates = [
 
 ]
 
-export default function TemplatesPage() {
+export default function TemplatesPages() {
 
   return (
 
