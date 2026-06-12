@@ -1,46 +1,25 @@
-import { motion } from "framer-motion"
+import { Link } from "react-router-dom"
 
 export default function Footer() {
 
   return (
 
-    <footer className="border-t border-white/10 bg-[#050505] text-white">
+    <footer className="border-t border-white/10 bg-black">
 
       <div className="max-w-7xl mx-auto px-6 py-16">
 
-        {/* Top Section */}
-        <div className="grid md:grid-cols-4 gap-12 mb-16">
+        <div className="grid md:grid-cols-4 gap-12">
 
           {/* Brand */}
           <div>
 
-            <div className="flex items-center gap-4 mb-6">
-
-              <div className="w-12 h-12 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center shadow-[0_0_30px_rgba(59,130,246,0.35)]">
-
-                <span className="font-bold text-lg">
-                  V
-                </span>
-
-              </div>
-
-              <div>
-
-                <h2 className="text-2xl font-semibold">
-                  Velora
-                </h2>
-
-                <p className="text-gray-400 text-sm">
-                  AI Website Studio
-                </p>
-
-              </div>
-
-            </div>
+            <h2 className="text-2xl font-bold text-white mb-4">
+              Velora
+            </h2>
 
             <p className="text-gray-400 leading-relaxed">
-              Build futuristic AI-powered websites with premium templates,
-              smart automation, and modern SaaS tools.
+              Build beautiful websites with AI.
+              Faster, smarter and easier than ever.
             </p>
 
           </div>
@@ -48,27 +27,32 @@ export default function Footer() {
           {/* Product */}
           <div>
 
-            <h3 className="text-xl font-semibold mb-6">
+            <h3 className="text-white font-semibold mb-4">
               Product
             </h3>
 
-            <div className="space-y-4 text-gray-400">
+            <div className="flex flex-col gap-3 text-gray-400">
 
-              <p className="hover:text-white transition-all duration-300 cursor-pointer">
-                Features
-              </p>
-
-              <p className="hover:text-white transition-all duration-300 cursor-pointer">
-                Templates
-              </p>
-
-              <p className="hover:text-white transition-all duration-300 cursor-pointer">
+              <Link
+                to="/dashboard"
+                className="hover:text-white transition"
+              >
                 Dashboard
-              </p>
+              </Link>
 
-              <p className="hover:text-white transition-all duration-300 cursor-pointer">
-                Pricing
-              </p>
+              <Link
+                to="/dashboard/templates"
+                className="hover:text-white transition"
+              >
+                Templates
+              </Link>
+
+              <Link
+                to="/dashboard/aibuilder"
+                className="hover:text-white transition"
+              >
+                AI Builder
+              </Link>
 
             </div>
 
@@ -77,65 +61,52 @@ export default function Footer() {
           {/* Company */}
           <div>
 
-            <h3 className="text-xl font-semibold mb-6">
+            <h3 className="text-white font-semibold mb-4">
               Company
             </h3>
 
-            <div className="space-y-4 text-gray-400">
+            <div className="flex flex-col gap-3 text-gray-400">
 
-              <p className="hover:text-white transition-all duration-300 cursor-pointer">
+              <Link
+                to="/about"
+                className="hover:text-white transition"
+              >
                 About
-              </p>
+              </Link>
 
-              <p className="hover:text-white transition-all duration-300 cursor-pointer">
-                Careers
-              </p>
-
-              <p className="hover:text-white transition-all duration-300 cursor-pointer">
+              <Link
+                to="/contact"
+                className="hover:text-white transition"
+              >
                 Contact
-              </p>
-
-              <p className="hover:text-white transition-all duration-300 cursor-pointer">
-                Blog
-              </p>
+              </Link>
 
             </div>
 
           </div>
 
-          {/* Newsletter */}
+          {/* Legal */}
           <div>
 
-            <h3 className="text-xl font-semibold mb-6">
-              Stay Updated
+            <h3 className="text-white font-semibold mb-4">
+              Legal
             </h3>
 
-            <p className="text-gray-400 mb-6">
-              Get latest AI website trends and updates.
-            </p>
+            <div className="flex flex-col gap-3 text-gray-400">
 
-            <div className="flex flex-col gap-4">
-
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="px-5 py-4 rounded-2xl bg-white/5 border border-white/10 outline-none text-white"
-              />
-
-              <motion.button
-
-                whileHover={{
-                  scale: 1.03,
-                }}
-
-                whileTap={{
-                  scale: 0.97,
-                }}
-
-                className="py-4 rounded-2xl bg-gradient-to-r from-blue-500 to-purple-500 shadow-[0_0_30px_rgba(59,130,246,0.35)]"
+              <Link
+                to="/privacy"
+                className="hover:text-white transition"
               >
-                Subscribe
-              </motion.button>
+                Privacy Policy
+              </Link>
+
+              <Link
+                to="/terms"
+                className="hover:text-white transition"
+              >
+                Terms of Service
+              </Link>
 
             </div>
 
@@ -143,28 +114,17 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+        {/* Bottom Section */}
 
-          <p className="text-gray-500">
+        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between">
+
+          <p className="text-gray-500 text-sm">
             © 2026 Velora. All rights reserved.
           </p>
 
-          <div className="flex items-center gap-6 text-gray-400">
-
-            <p className="hover:text-white transition-all duration-300 cursor-pointer">
-              Privacy Policy
-            </p>
-
-            <p className="hover:text-white transition-all duration-300 cursor-pointer">
-              Terms
-            </p>
-
-            <p className="hover:text-white transition-all duration-300 cursor-pointer">
-              Cookies
-            </p>
-
-          </div>
+          <p className="text-gray-500 text-sm mt-4 md:mt-0">
+            Made with ❤️ by Velora
+          </p>
 
         </div>
 
