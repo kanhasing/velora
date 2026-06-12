@@ -1,0 +1,58 @@
+<svg width="420" height="100" viewBox="0 0 420 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <linearGradient id="veloraGradient" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Icon -->
+  <g transform="translate(10,10)">
+    <rect
+      x="0"
+      y="0"
+      width="80"
+      height="80"
+      rx="22"
+      fill="url(#veloraGradient)"
+    />
+
+    <path
+      d="M22 18L40 60L58 18H68L44 72H36L12 18H22Z"
+      fill="white"
+    />
+
+    <path
+      d="M50 14L44 30H55L38 58L44 40H33L50 14Z"
+      fill="#F8FAFC"
+      opacity="0.9"
+    />
+  </g>
+
+  <!-- Brand Name -->
+  <text
+    x="110"
+    y="58"
+    fill="white"
+    font-family="Inter, Arial, sans-serif"
+    font-size="42"
+    font-weight="700"
+    letter-spacing="1"
+  >
+    VELORA
+  </text>
+
+  <text
+    x="112"
+    y="82"
+    fill="#94A3B8"
+    font-family="Inter, Arial, sans-serif"
+    font-size="14"
+    font-weight="500"
+    letter-spacing="2"
+  >
+    BUILD WEBSITES WITH AI
+  </text>
+
+</svg>

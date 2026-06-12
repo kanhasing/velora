@@ -1,5 +1,6 @@
 import { motion } from "framer-motion"
 import { Link } from "react-router-dom"
+import Logo from "../assets/velora-logo.svg"
 
 export default function Navbar() {
 
@@ -27,17 +28,20 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between rounded-3xl border border-white/10 bg-white/[0.05] backdrop-blur-2xl px-8 py-4 shadow-[0_0_40px_rgba(255,255,255,0.03)]">
 
         {/* Logo */}
-        <Link to="/">
+        <Link
+          to="/"
+          className="flex items-center gap-3"
+        >
 
-          <h1 className="text-2xl font-semibold tracking-tight text-white">
-
-            Velora
-
-          </h1>
+          <img
+            src={Logo}
+            alt="Velora"
+            className="h-10 w-auto"
+          />
 
         </Link>
 
-        {/* Nav Links */}
+        {/* Navigation Links */}
         <div className="hidden md:flex items-center gap-8 text-gray-300">
 
           <Link
@@ -68,12 +72,25 @@ export default function Navbar() {
             AI Builder
           </Link>
 
+          <Link
+            to="/about"
+            className="hover:text-white transition"
+          >
+            About
+          </Link>
+
+          <Link
+            to="/contact"
+            className="hover:text-white transition"
+          >
+            Contact
+          </Link>
+
         </div>
 
-        {/* Right Buttons */}
+        {/* Right Side Buttons */}
         <div className="flex items-center gap-4">
 
-          {/* Login */}
           <Link to="/login">
 
             <motion.button
@@ -95,7 +112,6 @@ export default function Navbar() {
 
           </Link>
 
-          {/* Start Building */}
           <Link to="/dashboard/aibuilder">
 
             <motion.button
