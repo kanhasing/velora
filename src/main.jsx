@@ -29,6 +29,7 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Privacy from "./pages/Privacy"
 import Terms from "./pages/Terms"
+import NotFound from "./pages/NotFound"
 
 ReactDOM.createRoot(
   document.getElementById("root")
@@ -146,6 +147,12 @@ ReactDOM.createRoot(
               <AIChat />
             </ProtectedRoute>
           }
+        />
+
+        {/* 404 Page - MUST BE LAST */}
+        <Route
+          path="*"
+          element={<NotFound />}
         />
 
       </Routes>
